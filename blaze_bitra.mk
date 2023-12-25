@@ -24,6 +24,8 @@ $(call inherit-product, vendor/blaze/config/common_full_phone.mk)
 # Inherit Basic Call Recorder (For Project Blaze A14)
 $(call inherit-product, vendor/bcr/bcr.mk)
 
+# ViPER4Android FX
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 
 # Project Blaze Maintainer
 BLAZE_BUILD_TYPE := OFFICIAL
@@ -35,6 +37,7 @@ TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_SUPPORTS_BLUR := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_EXCLUDES_AUDIOFX := true
 
 # GMS Flags
 TARGET_GAPPS_ARCH := arm64
