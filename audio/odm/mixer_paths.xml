@@ -12,7 +12,7 @@
 <!--       with the distribution.                                           -->
 <!--     * Neither the name of The Linux Foundation nor the names of its    -->
 <!--       contributors may be used to endorse or promote products derived  -->
-<!--       from this software wihout specific prior written permission.    -->
+<!--       from this software without specific prior written permission.    -->
 <!--                                                                        -->
 <!-- THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED           -->
 <!-- WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF   -->
@@ -1056,6 +1056,10 @@
         <path name="low-latency-playback bt-sco" />
     </path>
 
+    <path name="low-latency-playback bt-sco-swb">
+        <path name="low-latency-playback bt-sco-wb" />
+    </path>
+
     <path name="low-latency-playback speaker-and-display-port">
         <path name="low-latency-playback display-port" />
         <path name="low-latency-playback speaker" />
@@ -1981,6 +1985,10 @@
         <path name="audio-record bt-sco" />
     </path>
 
+    <path name="audio-record bt-sco-swb">
+        <path name="audio-record bt-sco-wb" />
+    </path>
+
     <path name="audio-record capture-fm">
         <ctl name="MultiMedia1 Mixer SLIM_8_TX" value="1" />
     </path>
@@ -2395,6 +2403,10 @@
         <path name="voicemmode2-call bt-sco" />
     </path>
 
+    <path name="voicemmode2-call bt-sco-swb">
+        <path name="voicemmode2-call bt-sco-wb" />
+    </path>
+
     <path name="voicemmode2-call afe-proxy">
         <ctl name="AFE_PCM_RX_Voice Mixer VoiceMMode2" value="1" />
         <ctl name="VoiceMMode2_Tx Mixer AFE_PCM_TX_MMode2" value="1" />
@@ -2463,6 +2475,10 @@
     <path name="audio-playback-voip bt-sco-wb">
         <ctl name="BT SampleRate" value="KHZ_16" />
         <path name="audio-playback-voip bt-sco" />
+    </path>
+
+    <path name="audio-playback-voip bt-sco-swb">
+        <path name="audio-playback-voip bt-sco-wb" />
     </path>
 
     <!--Zhao.Pan@PSW.MM.AudioDriver.HAL, 2021/04/09, Add route for bug 1297527-->
@@ -3835,7 +3851,7 @@
 
     <path name="voice-tty-full-headset-mic">
         <path name="amic2" />
-        <ctl name="ADC2 Volume" value="6" />
+        <ctl name="ADC2 Volume" value="0" />
         <ctl name="DEC0 Volume" value="84" />
     </path>
 
