@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/blaze_bitra.mk
+    $(LOCAL_DIR)/droidx_bitra.mk
 
 COMMON_LUNCH_CHOICES := \
-    blaze_bitra-user \
-    blaze_bitra-userdebug \
-    blaze_bitra-eng
+    droidx_bitra-user \
+    droidx_bitra-userdebug \
+    droidx_bitra-eng

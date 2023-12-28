@@ -18,18 +18,14 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common blaze stuff.
-$(call inherit-product, vendor/blaze/config/common_full_phone.mk)
-
-# Inherit Basic Call Recorder (For Project Blaze A14)
-$(call inherit-product, vendor/bcr/bcr.mk)
+# Inherit some common droidx stuff.
+$(call inherit-product, vendor/droidx/config/common_full_phone.mk)
 
 # ViPER4Android FX
 $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 
 # Project Blaze Maintainer
-BLAZE_BUILD_TYPE := OFFICIAL
-BLAZE_MAINTAINER := OMKAR-PARTE
+DROIDX_BUILD_TYPE := UNOFFICIAL
 
 # Common Flag
 EXTRA_UDFPS_ANIMATIONS := true
@@ -38,21 +34,25 @@ TARGET_SUPPORTS_BLUR := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_EXCLUDES_AUDIOFX := true
+TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
+USE_PIXEL_CHARGER := true
 
 # GMS Flags
 TARGET_GAPPS_ARCH := arm64
+DROIDX_GAPPS := true
 WITH_GAPPS := true
-TARGET_INCLUDES_SOUND_AMPLIFIER := false
-TARGET_INCLUDES_ARCORE := false
-TARGET_INCLUDES_GOOGLE_WELLBEING := false
-TARGET_REPLACE_GOOGLE_CLOCK := true
-
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_USE_GOOGLE_TELEPHONY := true
+TARGET_SUPPORTS_CALL_RECORDING := true
+TARGET_INCLUDE_STOCK_ARCORE := false
+TARGET_USE_QUICKPIC := false
+TARGET_USE_MOTO_CALCULATOR := false
 
 # Inherit from device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := blaze_bitra
+PRODUCT_NAME := droidx_bitra
 PRODUCT_DEVICE := bitra
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := RMX3370
