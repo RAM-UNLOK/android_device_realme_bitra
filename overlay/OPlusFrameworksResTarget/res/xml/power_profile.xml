@@ -53,7 +53,7 @@
   <item name="camera.flashlight">128</item> <!-- Avg. power for camera flash, ~160mA -->
   <item name="camera.avg">532</item> <!-- Avg. power use of camera in standard usecases, ~550mA -->
   <item name="gps.on">75</item> <!-- ~50mA -->
-
+  
   <item name="dsp.audio">16</item> <!-- new add ~10mA -->
   <item name="dsp.video">41</item> <!-- new add ~50mA -->
   <item name="bluetooth.controller.idle">1.7</item>  <!--new add -->
@@ -96,7 +96,7 @@
   <array name="cpu.clusters.cores">
       <value>4</value> <!-- cluster 0 has cpu0, cpu1, cpu2, cpu3 -->
       <value>3</value> <!-- cluster 1 has cpu4, cpu5, cpu6 -->
-      <value>1</value> <!-- cluster 1 has cpu7 -->
+      <value>1</value> <!-- cluster 2 has cpu7 -->
   </array>
 
     <!-- Different CPU speeds for cluster 0 as reported in
@@ -120,6 +120,8 @@
       <value>1420800  </value>  <!-- 1382.4 MHz CPU speed -->
       <value>1516800  </value>  <!-- 1478.4 MHz CPU speed -->
       <value>1612800  </value>  <!-- 1555.2 MHz CPU speed -->
+      <value>1708800  </value>  <!-- 1555.2 MHz CPU speed -->
+      <value>1804800  </value>  <!-- 1632 MHz CPU speed -->
   </array>
 
   <array name="cpu.core_speeds.cluster1">
@@ -139,6 +141,8 @@
       <value>2054400  </value>  <!-- 2131.2  MHz CPU speed -->
       <value>2150400  </value>  <!-- 2227.2  MHz CPU speed -->
       <value>2246400  </value>  <!-- 2323.2  MHz CPU speed -->
+      <value>2342400 </value>  <!-- 2419.2  MHz CPU speed -->
+      <value>2419200 </value>  <!-- 2419.2  MHz CPU speed -->
   </array>
 
   <array name="cpu.core_speeds.cluster2">
@@ -161,6 +165,8 @@
       <value>2553600   </value>  <!-- 2534.4  MHz CPU speed -->
       <value>2649600   </value>  <!-- 2649.6  MHz CPU speed -->
       <value>2745600   </value>  <!-- 2745.6  MHz CPU speed -->
+      <value>2841600 </value>  <!-- 2841.6  MHz CPU speed -->
+      <value>3187200 </value>  <!-- 3187.2  MHz CPU speed -->
   </array>
 
   <!-- Current at each CPU speed for cluster 0, as per 'cpu.speeds.cluster0'.
@@ -182,6 +188,8 @@
       <value>166</value>  <!-- ~80mA -->
       <value>180</value>  <!-- ~80mA -->
       <value>191</value>  <!-- ~90mA -->
+      <value>204</value>  <!-- ~90mA -->
+      <value>211</value>  <!-- ~90mA -->
   </array>
 
   <!-- Current at each CPU speed for cluster 1, as per 'cpu.speeds.cluster1'.
@@ -204,6 +212,8 @@
       <value>215</value>  <!-- ~190mA -->
       <value>230</value>  <!-- ~190mA -->
       <value>245</value>  <!-- ~200mA -->
+      <value>260</value>  <!-- ~200mA -->
+      <value>280</value>  <!-- ~200mA -->
   </array>
 
   <!-- Current at each CPU speed for cluster 2, as per 'cpu.speeds.cluster2'.
@@ -228,6 +238,8 @@
       <value>220</value>  <!-- ~200mA -->
       <value>235</value>  <!-- ~170mA -->
       <value>260</value>  <!-- ~190mA -->
+      <value>291</value>  <!-- ~190mA -->
+      <value>325</value>  <!-- ~200mA -->
   </array>
 
   <!-- Current when CPU is awake -->
