@@ -18,8 +18,8 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common blaze stuff.
-$(call inherit-product, vendor/blaze/config/common_full_phone.mk)
+# Inherit some common lineage stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit Basic Call Recorder (For Project Blaze A14)
 $(call inherit-product, vendor/bcr/bcr.mk)
@@ -27,32 +27,35 @@ $(call inherit-product, vendor/bcr/bcr.mk)
 # ViPER4Android FX
 $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 
-# Project Blaze Maintainer
-BLAZE_BUILD_TYPE := OFFICIAL
-BLAZE_MAINTAINER := OMKAR-PARTE
+# Matrixx
+MATRIXX_BUILD_TYPE := Unofficial
+MATRIXX_MAINTAINER := RAM-UNLOK
+MATRIXX_CHIPSET := SM8250
+MATRIXX_BATTERY := 5000mah
+MATRIXX_DISPLAY := 1080x2400
 
 # Common Flag
 EXTRA_UDFPS_ANIMATIONS := true
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_SUPPORTS_BLUR := true
+TARGET_ENABLE_BLUR := true
+
+TARGET_SUPPORTS_64_BIT_APPS := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
+
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_EXCLUDES_AUDIOFX := true
+TARGET_CALL_RECORDING_SUPPORTED := true
 
 # GMS Flags
 TARGET_GAPPS_ARCH := arm64
-WITH_GAPPS := true
-TARGET_INCLUDES_SOUND_AMPLIFIER := false
-TARGET_INCLUDES_ARCORE := false
-TARGET_INCLUDES_GOOGLE_WELLBEING := false
-TARGET_REPLACE_GOOGLE_CLOCK := true
-
+WITH_GMS := true
 
 # Inherit from device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := blaze_bitra
+PRODUCT_NAME := lineage_bitra
 PRODUCT_DEVICE := bitra
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := RMX3370
@@ -69,3 +72,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_PRODUCT=$(PRODUCT_SYSTEM_NAME)
 
 BUILD_FINGERPRINT := realme/RMX3370/RE879AL1:13/TP1A.220905.001/R.149e403-1-5b8f:user/release-keys
+
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.build.fingerprint=$(BUILD_FINGERPRINT)

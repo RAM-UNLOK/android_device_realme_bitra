@@ -23,11 +23,11 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Height of the status bar -->
-    <dimen name="status_bar_height_portrait">108.5px</dimen>
-    <dimen name="status_bar_height_landscape">108.5px</dimen>
+    <dimen name="status_bar_height_portrait">110px</dimen>
+    <dimen name="status_bar_height_landscape">110px</dimen>
 
     <!-- Rounded corners  -->
-    <dimen name="rounded_corner_radius_top">90px</dimen>
-    <dimen name="rounded_corner_radius_bottom">90px</dimen>
+    <dimen name="rounded_corner_radius_top">45px</dimen>
+    <dimen name="rounded_corner_radius_bottom">45px</dimen>
 
 </resources>

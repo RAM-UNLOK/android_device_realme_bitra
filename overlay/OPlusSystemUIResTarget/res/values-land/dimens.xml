@@ -26,5 +26,5 @@
     <dimen name="status_bar_padding_top">0dp</dimen>
 
     <!--  Allow CornerHandleView and PathSpecCornerPathRenderer to decouple from corner-radius -->
-    <dimen name="config_rounded_mask_size">97px</dimen>
+    <dimen name="config_rounded_mask_size">110px</dimen>
 </resources>

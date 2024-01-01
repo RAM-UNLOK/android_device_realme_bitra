@@ -23,8 +23,8 @@
     <dimen name="status_bar_padding_end">03px</dimen>
 
     <!-- the padding on the top of the statusbar (usually 0) -->
-    <dimen name="status_bar_padding_top">25px</dimen>
+    <dimen name="status_bar_padding_top">0px</dimen>
 
     <!--  Allow CornerHandleView and PathSpecCornerPathRenderer to decouple from corner-radius -->
-    <dimen name="config_rounded_mask_size">97px</dimen>
+    <dimen name="config_rounded_mask_size">110px</dimen>
 </resources>

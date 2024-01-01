@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/blaze_bitra.mk
+    $(LOCAL_DIR)/lineage_bitra.mk
 
 COMMON_LUNCH_CHOICES := \
-    blaze_bitra-user \
-    blaze_bitra-userdebug \
-    blaze_bitra-eng
+    lineage_bitra-user \
+    lineage_bitra-userdebug \
+    lineage_bitra-eng
