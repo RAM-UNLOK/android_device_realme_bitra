@@ -45,7 +45,6 @@ PRODUCT_SYSTEM_PROPERTIES += \
 PRODUCT_PACKAGES += \
     OPlusFrameworksResTarget \
     OPlusSettingsProviderResTarget \
-    OPlusSettingsResTarget \
     OPlusSystemUIResTarget
 
 # Soong namespaces
