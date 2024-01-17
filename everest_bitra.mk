@@ -18,8 +18,8 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common everest stuff.
+$(call inherit-product, vendor/everest/config/common_full_phone.mk)
 
 # Inherit Basic Call Recorder (For Project Blaze A14)
 $(call inherit-product, vendor/bcr/bcr.mk)
@@ -28,11 +28,11 @@ $(call inherit-product, vendor/bcr/bcr.mk)
 $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 
 # Matrixx
-MATRIXX_BUILD_TYPE := Unofficial
-MATRIXX_MAINTAINER := RAM-UNLOK
-MATRIXX_CHIPSET := SM8250
-MATRIXX_BATTERY := 5000mah
-MATRIXX_DISPLAY := 1080x2400
+EVEREST_BUILD_TYPE := Unofficial
+EVEREST_MAINTAINER := RAM-UNLOK
+EVEREST_CHIPSET := SM8250
+EVEREST_BATTERY := 5000mah
+EVEREST_DISPLAY := 1080x2400
 
 # Common Flag
 EXTRA_UDFPS_ANIMATIONS := true
@@ -51,11 +51,16 @@ TARGET_CALL_RECORDING_SUPPORTED := true
 TARGET_GAPPS_ARCH := arm64
 WITH_GMS := true
 
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
+
 # Inherit from device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_bitra
+PRODUCT_NAME := everest_bitra
 PRODUCT_DEVICE := bitra
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := RMX3370
